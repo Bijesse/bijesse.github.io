@@ -12,7 +12,7 @@ called `flickerObj`
 var flickerObj = JSON.stringify(jsonString);
 var flickerString =JSON.parse(flickerObj);
 
-//console.log(flickerObj);
+console.log(flickerObj);
 
 
 /*
@@ -49,3 +49,5 @@ var JSONlinks = JSON.stringify(links);
 //console.log(JSONlinks);
 var linksObject = JSON.parse(JSONlinks);
 console.log(linksObject);
+
+// I am not getting valid JSON and I am not sure why

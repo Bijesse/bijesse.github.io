@@ -12,14 +12,42 @@
 // similar to window.onload
 $(document).ready(function () {
 	// YOUR CODE HERE
+ //Init Templates Append
+ var initTodos = {
+  todos: [
+    "data types",
+    "arrays",
+    "objects",
+    "functions",
+  ]
+ }
+
+//step 2: get template and compile using handlebars
+var initSource = $("#init-template").html();
+var initCompiled = Handlebars.compile(initSource);
+
+//step 3: pass compiled template JS Object
+var initTemplate = initCompiled(initTodos);
+
+//step 4: append tmeplate to the DOM
+$("#list").append(initTemplate);
+
+
+//New Item Template Append
+
   $("#clickme").click(function(e){
     e.preventDefault();
     var input = $("#new-item").val();
     console.log(input);
-    if(input !== ""){
-    $("#list").append("<li>" + input + "</li>");
-    $("#new-item").val(null);
-  }
+
+  //   if(input !== ""){
+  //  $("#list").append("<li>" + input + "</li>");
+  //   $("#new-item").val(null);
+  // }
   });
 
+  //removes the <li> on click even if they were created dynamically
+  $(document).on("click", "li", function(){
+    $(this).remove();
+  })
 });
