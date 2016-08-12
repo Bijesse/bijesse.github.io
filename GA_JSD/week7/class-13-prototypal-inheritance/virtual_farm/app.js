@@ -42,7 +42,7 @@ $(document).ready(function () {
 	// push all animal instances here
 	var farmAnimals = [];
 
-
+//object constructor
 function FarmAnimal (name, sound, image){
 	this.name = name;
 	this.sound = sound;
@@ -52,6 +52,7 @@ function FarmAnimal (name, sound, image){
 	}
 }
 
+//instances
 function Cat (name, sound, image){
 	FarmAnimal.call(this, name, sound, image)
 }
@@ -64,26 +65,32 @@ function Spider (name, sound, image){
 	FarmAnimal.call(this, name, sound, image)
 }
 
+//prototype?
 var cat = new Cat('piper', 'meow', 'http://www.cutecatgifs.com/wp-content/uploads/2015/07/Cat-slots.gif')
 var pig = new Pig('wilbur', 'snort', 'http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/pig-full-body.jpg.adapt.945.1.jpg')
 var spider = new Spider('charlotte', 'words', 'http://www.telegraph.co.uk/content/dam/news/2016/04/27/BMMPYM-redback-large_trans++eo_i_u9APj8RuoebjoAHt0k9u7HhRJvuo-ZLenGRumA.jpg')
+
 
 cat.talk();
 pig.talk();
 spider.talk();
 
+//pushing new var to array
 farmAnimals.push(cat);
 farmAnimals.push(pig);
 farmAnimals.push(spider);
 console.log(farmAnimals)
 
+//appending images to html
 $("body").append("<img class='animal' id='cat' src ="+farmAnimals[0].image+">");
 $("body").append("<img class='animal' id='pig' src ="+farmAnimals[1].image+">");
 $("body").append("<img class='animal' id='spider' src ="+farmAnimals[2].image+">");
 
-$("#cat").css("top", "100px");
-$("#pig").css("top", "200px");
+$("#cat").css("top", "200px");
+$("#pig").css("top", "300px");
+$("#spider").css("top", "400px");
 
+//moves the cat
 $("body").keydown(function(event) {
 
 if (event.which === 38) {
