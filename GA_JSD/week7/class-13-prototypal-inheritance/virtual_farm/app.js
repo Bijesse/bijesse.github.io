@@ -53,8 +53,9 @@ function FarmAnimal (name, sound, image){
 }
 
 //instances
-function Cat (name, sound, image){
+function Cat (name, sound, image, color){
 	FarmAnimal.call(this, name, sound, image)
+		this.color = color;
 }
 
 function Pig (name, sound, image){
@@ -65,8 +66,8 @@ function Spider (name, sound, image){
 	FarmAnimal.call(this, name, sound, image)
 }
 
-//prototype?
-var cat = new Cat('piper', 'meow', 'http://www.cutecatgifs.com/wp-content/uploads/2015/07/Cat-slots.gif')
+//creating an instance of Cat constructor
+var cat = new Cat('piper', 'meow', 'http://www.cutecatgifs.com/wp-content/uploads/2015/07/Cat-slots.gif', 'orange')
 var pig = new Pig('wilbur', 'snort', 'http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/pig-full-body.jpg.adapt.945.1.jpg')
 var spider = new Spider('charlotte', 'words', 'http://www.telegraph.co.uk/content/dam/news/2016/04/27/BMMPYM-redback-large_trans++eo_i_u9APj8RuoebjoAHt0k9u7HhRJvuo-ZLenGRumA.jpg')
 
