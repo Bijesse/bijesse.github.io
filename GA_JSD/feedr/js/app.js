@@ -2,13 +2,38 @@
   Please add all Javascript code to this file.
 */
 
-// creates the items within the dropdown menu.
+var open = [openDigg, openMash, openReddit];
+
+
+//creates the items within the dropdown menu.
 var dropdown = ["Digg", "Mashable", "Reddit"];
   $.each(dropdown, function(index, element){
 
-    $('#drop').append('<li><a href = "">' + element + '</a></li>');
+    $('#drop').append('<li id=' + element + '><a href = "">' + element + '</a></li>');
+    $('#' + element).click(function(e) {
+      e.preventDefault();
+      open[index](); 
+      $('span').html(element);
+    })
 
+    
   });
+
+//  Templating solution for appending 3 sources
+// var source = $("#navHeader").html();
+// var template = Handlebars.compile(source);
+
+// var sites = { sites: ["Digg","Mashable", "Reddit"]  }
+// var allSites = template(sites)
+// $('#drop').append(allSites)
+
+
+  //$('.container').click(function(){
+  //  console.log('test')
+  //  openMash();
+//
+  //})
+
 
 var diggRequest = "https://accesscontrolalloworiginall.herokuapp.com/http://digg.com/api/news/popular.json"
 var mashRequest = "https://accesscontrolalloworiginall.herokuapp.com/http://mashable.com/stories.json"
@@ -76,7 +101,7 @@ function openReddit(){
 //openDigg();
 //openMash();
 //openReddit()
-             
+
 
 
 //sample helper function
