@@ -27,7 +27,7 @@ $(document).ready(function() {
   //   title: "home"
   // });
 
-var citiUrl = "https://api.citybik.es/citi-bike-nyc.json";
+var citiUrl = "http://api.citybik.es/citi-bike-nyc.json";
   $.ajax(
    {
       url: citiUrl,
@@ -54,16 +54,17 @@ var citiUrl = "https://api.citybik.es/citi-bike-nyc.json";
     });
   //Event listener for the terminal clicked
           google.maps.event.addListener(terminal,'click',function() {
-            terminal.addListener('click', function() {
+          //  terminal.addListener('click', function() {
               infowindow.open(map, terminal);
-        });
+        //});
     //map.setZoom(18);
     //map.setCenter(terminal.getPosition());
     });
 
+    var bikeContent = '<div>'+ item.name +'</div>' + '<div>'+ 'bikes at station: '+ item.bikes +'</div>' + '<div>'+ 'open spots at station: '+ item.free +'</div>';
   //generate info window
     var infowindow = new google.maps.InfoWindow({
-              content: item.lat + '',
+              content: bikeContent,
             });
 
 });
