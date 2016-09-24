@@ -1,0 +1,17 @@
+body {
+  background:black;
+}
+
+h1{
+  color: white;
+  text-align: center;
+}
+
+#states {
+  fill: #aaa;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+/*   stroke-dasharray: 20,10,5,5,5,10; */
+}
