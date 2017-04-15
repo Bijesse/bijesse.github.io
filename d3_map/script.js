@@ -11,11 +11,11 @@ var height = window.innerHeight;
 
 
 //add a projection for d3.geo.albersUsa()
-	var projection = d3.geo.albersUsa().scale(1070).translate([width / 2, height / 2]);
+	var projection = d3.geoAlbersUsa().scale(1070).translate([width / 2, height / 2]);
 
 
 //add a geo path generator with it's projection method
-var path = d3.geo.path().projection(projection);
+var path = d3.geoPath().projection(projection);
 
 //add a convenience method to pull in json data and populate the map
 d3.json(url, function(err, us)  {
