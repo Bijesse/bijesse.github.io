@@ -200,3 +200,7 @@ a.socialIcon:hover, .socialHoverClass {
   background-color: beige;
   margin: 30px;
 }
+
+h4{
+  margin: 0;
+}
