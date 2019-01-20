@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: bijesse.com
+Token: 41790cd8eb7d4adf206d68845ea1873381117108e937950b58bbae24f24ee894
