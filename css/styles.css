@@ -10263,3 +10263,7 @@ form .row:first-child .floating-label-form-group {
 #email-text {
   color: white;
 }
+
+#linked-site-text {
+  color: #2c3e50;
+}
