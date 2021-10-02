@@ -2,11 +2,17 @@
 
 html, body {
   margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
   width: 100%;
   text-align: center;
-  background-color: #1a1a1a;
+  background-color: #9DBCBC;
   box-sizing: border-box;
   overflow: hidden;
+}
+
+p, h1{
+  color:  white;
 }
 
 .smart-player-embed-container {
