@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Knowledge Check Test</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/img/faviTom.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3TE0XPNZE"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-J3TE0XPNZE');
+        </script>
+    </head>
+  <body>
+    <h1>Example of an interactive instant feedback question</h1>
+<p>The question below will provide the student with immediate feedback based on the response they choose</p>
+<div class="card">
+<div class="card-header">Knowledge Check</div>
+<div class="card-body">
+<p class="card-text">What is 2+2?</p>
+<!--Wrong Answer Option 1-->
+<p class="text-left"><a class="btn btn-dark" role="button" data-toggle="collapse" href="#atod_check1" aria-expanded="false" aria-controls="atod_check1"> 3 </a></p>
+<div class="collapse" id="atod_check1">
+<div class="alert alert-danger">
+<p class="lead" style="color: black;"><strong>Wrong.</strong> 2 plus 2 does NOT equal 3</p>
+</div>
+</div>
+<!--Correct Answer Option 2-->
+<p class="text-left"><a class="btn btn-dark" role="button" data-toggle="collapse" href="#atod_check2" aria-expanded="false" aria-controls="atod_check2"> 4 </a></p>
+<div class="collapse" id="atod_check2">
+<div class="alert alert-success">
+<p class="lead" style="color: black;"><strong>Correct!</strong> 2 plus 2 does infact equal 4</p>
+</div>
+</div>
+<!--Wrong Answer Option 3-->
+<p class="text-left"><a class="btn btn-dark" role="button" data-toggle="collapse" href="#atod_check3" aria-expanded="false" aria-controls="atod_check3"> 5 </a></p>
+<div class="collapse" id="atod_check3">
+<div class="alert alert-danger">
+<p class="lead" style="color: black;"><strong>Wrong.</strong> 2 plus 2 does NOT equal 5</p>
+</div>
+</div>
+<!--Wrong Answer Option 4-->
+<p class="text-left"><a class="btn btn-dark" role="button" data-toggle="collapse" href="#atod_check4" aria-expanded="false" aria-controls="atod_check4"> 6 </a></p>
+<div class="collapse" id="atod_check4">
+<div class="alert alert-danger">
+<p class="lead" style="color: black;"><strong>Wrong.</strong> 2 plus 2 does NOT equal 6</p>
+</div>
+</div>
+</div>
+</div>
+  </body>
