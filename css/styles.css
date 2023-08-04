@@ -159,7 +159,7 @@ sup {
 }
 
 a {
-  color: #9dbcbc;
+  color: #5d8989;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2860,8 +2860,8 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light {
-  color: #f8f9fa;
-  border-color: #f8f9fa;
+  color: #000;
+  border-color: #000;
 }
 .btn-outline-light:hover {
   color: #212529;
@@ -10178,13 +10178,18 @@ h3 {
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
 }
+
+.portfolio .portfolio-item-wide .portfolio-item-caption-wide:hover {
+  opacity: 1;
+}
+
 .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
   font-size: 1.5rem;
 }
 
 .portfolio-modal .portfolio-modal-title {
   font-size: 2.25rem;
-  line-height: 2rem;
+  line-height: 2rem;portfolioModal0Label
 }
 @media (min-width: 992px) {
   .portfolio-modal .portfolio-modal-title {
@@ -10202,6 +10207,35 @@ h3 {
   color: #9dbcbc;
   opacity: 1;
 }
+
+.portfolio-item-wide {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 80%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.portfolio-item-caption-wide {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgba(44, 62, 80, 0.9);
+}
+
+.switchable-image {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .switchable-image {
+            content: url('../assets/img/work/NR-tile-square.png');
+        }
 
 .floating-label-form-group {
   position: relative;
