@@ -71,6 +71,33 @@
             margin-top: 25px;
         }
     </style>
+    <script>
+    // Set the date of the bachelor party
+    var partyDate = new Date("June 19, 2025 00:00:00").getTime();
+
+    // Update the countdown every second
+    var countdownFunction = setInterval(function() {
+        var now = new Date().getTime();
+        var timeLeft = partyDate - now;
+
+        // Time calculations for days, hours, minutes, and seconds
+        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById("countdown").innerHTML = "Get Ready: " + days + " days || " + hours + " hours || "
+        + minutes + " minutes || " + seconds + " seconds ";
+
+        // If the countdown is finished, display some text
+        if (timeLeft < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "It's Party Time!";
+        }
+    }, 1000);
+</script>
+
 </head>
 <body>
 
@@ -90,6 +117,7 @@
 
     <div id="location" class="section">
         <h2>1904 Broad St, San Luis Obispo, CA 93401</br>June 19-22 (Thurs-Sun) 2025</h2>
+        <p id="countdown" style="font-size: 24px; color: #FF4500;"></p>
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.146749614117!2d-120.6613251!3d35.272707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ecf119614d3bc1%3A0xff10b7bf96f920a0!2s1904+Broad+St%2C+San+Luis+Obispo%2C+CA+93401!5e0!3m2!1sen!2sus!4v1694422800102!5m2!1sen!2sus"
             width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
